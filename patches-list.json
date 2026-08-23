@@ -1,32 +1,23 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "patches": [
     {
-      "name": "Example Patch",
-      "description": "Example patch to start with.",
-      "default": true,
-      "dependencies": [
-        "BytecodePatch"
-      ],
+      "name": "Change package name",
+      "description": "Changes the app package name to allow installing alongside the original.",
+      "default": false,
+      "dependencies": [],
       "compatiblePackages": [
         {
-          "packageName": "com.example.app",
-          "name": "XYZ app",
+          "packageName": "com.newsbreak.crimeradar",
+          "name": "CrimeRadar",
           "description": null,
           "apkFileType": "APK",
-          "appIconColor": "#FF0045",
+          "appIconColor": "#B71C1C",
           "signatures": null,
           "targets": [
             {
-              "version": "2.0.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "1.0.2",
+              "version": "26.33.1",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -35,7 +26,17 @@
           ]
         }
       ],
-      "options": []
+      "options": [
+        {
+          "key": "packageName",
+          "title": "New package name",
+          "description": null,
+          "required": true,
+          "type": "kotlin.String",
+          "default": "com.newsbreak.crimeradar.patched",
+          "values": null
+        }
+      ]
     },
     {
       "name": "Premium Bypass",
