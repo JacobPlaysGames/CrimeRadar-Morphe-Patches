@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-08-23T22:46:08",
-  "description": "## [1.2.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.4...v1.2.0) (2026-08-23)\n\n### ✨ Features\n\n* **crimeradar:** override server-sent location limit to 999",
+  "created_at": "2026-08-23T22:48:48",
+  "description": "## [1.2.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.3...v1.2.0) (2026-08-23)\n\n### 🐛 Bug Fixes\n\n* **crimeradar:** patch all premium gates (promotions, paywalls, map limits) ([5915d57](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5915d57f8f3963e69a0d0c8e2505624070e66e04))\n* **crimeradar:** update patches-bundle.json to v1.1.4 ([9ae388a](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/9ae388a6ed97b6f61c788499cd01f32a0e588942))\n* **crimeradar:** update patches-bundle.json to v1.2.0 ([2d13c0b](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/2d13c0bd4172eadcf0540661ac83ea9289c22f1a))\n\n### ✨ New Features\n\n* **crimeradar:** override server-sent location limit to 999 ([ece784b](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/ece784bef7cf86fe6ac6415a13a0fb91b7837aaf))",
   "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.2.0/patches-1.2.0.mpp",
   "signature_download_url": "",
   "version": "1.2.0"
