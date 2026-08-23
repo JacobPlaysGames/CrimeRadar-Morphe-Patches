@@ -5,14 +5,17 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.COMPATIBILITY_CRIMERADAR
 
 /**
- * Bypasses premium subscription checks by making PremiumEntitlementHelper.isPremiumActive()
- * always return true.
+ * Bypasses ALL premium subscription checks by patching multiple choke points:
  *
- * This unlocks:
- * - Ad-free experience
- * - Unlimited replay playback
- * - Unlimited audio playback
- * - 10 saved locations (instead of 1)
+ * 1. PremiumEntitlementHelper.isPremiumActive() → true
+ *    Entitlement layer: ads, replay/audio limits, saved location count.
+ *
+ * 2. SubscriptionAccountHelper.shouldSuppressPremiumPromotions() → true
+ *    Promotion/paywall layer: all premium banners, cards, upgrade popups.
+ *    Also covers RadarMapSubscriptionGateway.hasPaidEver() which delegates here.
+ *
+ * 3. RadarMapSubscriptionGateway.isActiveNow() → true
+ *    Map layer: "follow more locations" limit popup → paywall.
  */
 @Suppress("unused")
 val premiumBypassPatch = bytecodePatch(
@@ -23,10 +26,28 @@ val premiumBypassPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_CRIMERADAR)
 
     execute {
+        // Entitlement layer: ads, replay, audio, saved locations
         PremiumActiveFingerprint.method.addInstructions(
             0,
             """
-                # const/4 v0, 0x1 = true
+                const/4 v0, 0x1
+                return v0
+            """
+        )
+
+        // Promotion layer: all premium banners/cards/popups
+        SuppressPremiumPromotionsFingerprint.method.addInstructions(
+            0,
+            """
+                const/4 v0, 0x1
+                return v0
+            """
+        )
+
+        // Map layer: location limit popup
+        IsActiveNowFingerprint.method.addInstructions(
+            0,
+            """
                 const/4 v0, 0x1
                 return v0
             """
