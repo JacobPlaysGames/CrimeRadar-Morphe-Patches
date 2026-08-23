@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.2...v1.1.3) (2026-08-23)
+
+### 🐛 Bug Fixes
+
+* **crimeradar:** also rewrite [@string](https://github.com/string) resource authorities for install conflicts ([5eb11e3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5eb11e329f3f01e8afdf79494eb6bde4094a0b80))
+
 ## [1.1.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.1...v1.1.2) (2026-08-23)
 
 ### 🐛 Bug Fixes

@@ -15,7 +15,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.1.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.1.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+> **[v1.1.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.1.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
 <details open>
 <summary>📦 CrimeRadar&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>

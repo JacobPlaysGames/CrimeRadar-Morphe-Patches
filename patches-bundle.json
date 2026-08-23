@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-23T21:51:27",
-  "description": "## [1.1.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.1...v1.1.2) (2026-08-23)\n\n### 🐛 Bug Fixes\n\n* **crimeradar:** rewrite all provider authorities including hardcoded SDK ones ([429841d](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/429841de694931fe1e7139c5769d14c6ff3ea417))",
-  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.1.2/patches-1.1.2.mpp",
+  "created_at": "2026-08-23T22:01:34",
+  "description": "## [1.1.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.2...v1.1.3) (2026-08-23)\n\n### 🐛 Bug Fixes\n\n* **crimeradar:** also rewrite [@string](https://github.com/string) resource authorities for install conflicts ([5eb11e3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5eb11e329f3f01e8afdf79494eb6bde4094a0b80))",
+  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.1.3/patches-1.1.3.mpp",
   "signature_download_url": "",
-  "version": "1.1.2"
+  "version": "1.1.3"
 }
