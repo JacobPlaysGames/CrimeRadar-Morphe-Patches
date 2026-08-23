@@ -53,3 +53,20 @@ object IsActiveNowFingerprint : Fingerprint(
     returnType = "Z",
     parameters = emptyList()
 )
+
+/**
+ * Fingerprint for GLocationList.getLimit().
+ *
+ * Returns the server-sent location limit (default 1 for free users).
+ * Patching to return 999 overrides the server limit everywhere:
+ * - savedLimit LiveData (drives checkCanFollowOrShowLimit)
+ * - "+ add more" button visibility in MapFollowedLocationAdapter
+ * - Any other limit display
+ */
+object GetLimitFingerprint : Fingerprint(
+    definingClass = "Lcom/particlemedia/feature/map/data/GLocationList;",
+    name = "getLimit",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "I",
+    parameters = emptyList()
+)
