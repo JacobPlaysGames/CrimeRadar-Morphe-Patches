@@ -23,12 +23,13 @@ val changePackageNamePatch = resourcePatch(
         val newPackageName = packageNameOption.value
             ?: throw IllegalArgumentException("Package name option not set")
 
+        val oldPackageName = packageMetadata.packageName
+
         document("AndroidManifest.xml").use { document ->
             val manifest = document.documentElement
             manifest.setAttribute("package", newPackageName)
 
             // Rename custom permissions to avoid install conflicts
-            val oldPackageName = packageMetadata.packageName
             val permissions = document.getElementsByTagName("permission")
             val usesPermissions = document.getElementsByTagName("uses-permission")
 
@@ -61,9 +62,6 @@ val changePackageNamePatch = resourcePatch(
                 val provider = providers.item(i) as? Element ?: continue
                 val authorities = provider.getAttribute("android:authorities") ?: continue
 
-                // Skip string resource references like @string/sync_data_authority
-                if (authorities.startsWith("@")) continue
-
                 // Handle semicolon-separated multiple authorities
                 val newAuthorities = authorities.split(";").joinToString(";") { auth ->
                     val trimmed = auth.trim()
@@ -76,6 +74,21 @@ val changePackageNamePatch = resourcePatch(
                 }
 
                 provider.setAttribute("android:authorities", newAuthorities)
+            }
+        }
+
+        // Rewrite string resources that contain the old package name.
+        // This catches @string references used as provider authorities
+        // (e.g. @string/sync_data_authority -> com.newsbreak.crimeradar.datasync).
+        document("res/values/strings.xml").use { stringsDoc ->
+            val resources = stringsDoc.documentElement
+            val stringNodes = resources.getElementsByTagName("string")
+            for (i in 0 until stringNodes.length) {
+                val elem = stringNodes.item(i) as? Element ?: continue
+                val value = elem.textContent ?: continue
+                if (value.contains(oldPackageName)) {
+                    elem.textContent = value.replace(oldPackageName, newPackageName)
+                }
             }
         }
     }
