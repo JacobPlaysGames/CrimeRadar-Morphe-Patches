@@ -8,7 +8,7 @@ import org.w3c.dom.Element
 val changePackageNamePatch = resourcePatch(
     name = "Change package name",
     description = "Changes the app package name to allow installing alongside the original.",
-    default = false,
+    default = true,
 ) {
     compatibleWith(COMPATIBILITY_CRIMERADAR)
 
