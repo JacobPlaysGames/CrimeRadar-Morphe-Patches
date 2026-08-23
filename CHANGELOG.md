@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.3...v1.1.4) (2026-08-23)
+
+### 🐛 Bug Fixes
+
+* **crimeradar:** patch all premium gates (promotions, paywalls, map limits) ([5915d57](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5915d57f8f3963e69a0d0c8e2505624070e66e04))
+* **crimeradar:** update patches-bundle.json to v1.1.4 ([9ae388a](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/9ae388a6ed97b6f61c788499cd01f32a0e588942))
+
 ## [1.1.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.2...v1.1.3) (2026-08-23)
 
 ### 🐛 Bug Fixes
