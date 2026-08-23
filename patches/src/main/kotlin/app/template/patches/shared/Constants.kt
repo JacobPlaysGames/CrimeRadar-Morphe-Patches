@@ -18,18 +18,5 @@ object Constants {
         )
     )
 
-    val COMPATIBILITY_EXAMPLE = Compatibility(
-        name = "XYZ app",
-        packageName = "com.example.app",
-        apkFileType = ApkFileType.APK,
-        appIconColor = 0xFF0045,
-        targets = listOf(
-            AppTarget(
-                version = "2.0.0"
-            ),
-            AppTarget(
-                version = "1.0.2"
-            )
-        )
-    )
+
 }
