@@ -52,17 +52,30 @@ val changePackageNamePatch = resourcePatch(
                 }
             }
 
-            // Rewrite provider authorities to avoid conflicts
+            // Rewrite provider authorities to avoid conflicts.
+            // Must handle both package-namespaced authorities AND
+            // hardcoded SDK authorities (e.g. Facebook ContentProvider)
+            // that don't contain the package name.
             val providers = document.getElementsByTagName("provider")
             for (i in 0 until providers.length) {
                 val provider = providers.item(i) as? Element ?: continue
                 val authorities = provider.getAttribute("android:authorities") ?: continue
-                if (authorities.contains(oldPackageName)) {
-                    provider.setAttribute(
-                        "android:authorities",
-                        authorities.replace(oldPackageName, newPackageName)
-                    )
+
+                // Skip string resource references like @string/sync_data_authority
+                if (authorities.startsWith("@")) continue
+
+                // Handle semicolon-separated multiple authorities
+                val newAuthorities = authorities.split(";").joinToString(";") { auth ->
+                    val trimmed = auth.trim()
+                    when {
+                        trimmed.startsWith(newPackageName) -> trimmed
+                        trimmed.contains(oldPackageName) -> trimmed.replace(oldPackageName, newPackageName)
+                        // Hardcoded SDK authority (e.g. Facebook) — prefix to make unique
+                        else -> "$newPackageName.$trimmed"
+                    }
                 }
+
+                provider.setAttribute("android:authorities", newAuthorities)
             }
         }
     }
