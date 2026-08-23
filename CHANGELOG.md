@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.1...v1.1.2) (2026-08-23)
+
+### 🐛 Bug Fixes
+
+* **crimeradar:** rewrite all provider authorities including hardcoded SDK ones ([429841d](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/429841de694931fe1e7139c5769d14c6ff3ea417))
+
 ## [1.1.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.0...v1.1.1) (2026-08-23)
 
 ### 🐛 Bug Fixes

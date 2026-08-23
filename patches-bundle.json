@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-23T21:39:44",
-  "description": "## [1.1.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.0...v1.1.1) (2026-08-23)\n\n### 🐛 Bug Fixes\n\n* **crimeradar:** add v26.34.0 compatibility ([b99abb5](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/b99abb50b4708275b3bc47e3b688084196692bc8))\n* **crimeradar:** enable package name patch by default ([f4e7bf5](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/f4e7bf5a1931283510502359d8b855555af04a4f))",
-  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.1.1/patches-1.1.1.mpp",
+  "created_at": "2026-08-23T21:51:27",
+  "description": "## [1.1.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.1.1...v1.1.2) (2026-08-23)\n\n### 🐛 Bug Fixes\n\n* **crimeradar:** rewrite all provider authorities including hardcoded SDK ones ([429841d](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/429841de694931fe1e7139c5769d14c6ff3ea417))",
+  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.1.2/patches-1.1.2.mpp",
   "signature_download_url": "",
-  "version": "1.1.1"
+  "version": "1.1.2"
 }
