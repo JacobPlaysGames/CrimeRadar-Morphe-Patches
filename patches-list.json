@@ -112,6 +112,39 @@
       "options": []
     },
     {
+      "name": "Notification Range Extended",
+      "description": "Multiplies alert radius by 5x (10mi→50mi). Server may reject values >10.",
+      "default": false,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.newsbreak.crimeradar",
+          "name": "CrimeRadar",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#B71C1C",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "26.33.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Premium Bypass",
       "description": "Bypasses premium subscription checks to unlock all premium features.",
       "default": true,
