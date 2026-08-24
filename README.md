@@ -15,9 +15,9 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.2.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.2.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;6 patches total
+> **[v1.3.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.3.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;7 patches total
 <details open>
-<summary>📦 CrimeRadar&nbsp;&nbsp;•&nbsp;&nbsp;6 patches</summary>
+<summary>📦 CrimeRadar&nbsp;&nbsp;•&nbsp;&nbsp;7 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -27,6 +27,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
+| [Branding](#branding) | Changes app name to 'CrimeRadar+' and tints the icon for easy identification. |  |
 | [Change package name](#change-package-name) | Changes the app package name to allow installing alongside the original. | • New package name |
 | [Notification Limits Raised](#notification-limits-raised) | Raises per-category daily push caps and heads-up push limits. |  |
 | [Premium Bypass](#premium-bypass) | Bypasses premium subscription checks to unlock all premium features. |  |
