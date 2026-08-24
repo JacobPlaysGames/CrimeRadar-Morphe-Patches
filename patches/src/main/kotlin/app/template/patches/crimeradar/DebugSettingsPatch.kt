@@ -28,41 +28,29 @@ val debugSettingsPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_CRIMERADAR)
 
     execute {
-        // Append "CrimeRadar+ Patches" entry at end of settings list.
-        // initSettingItems() clears items then adds them; we append AFTER everything.
-        //
-        // CRITICAL: Use (initCount - 1) to insert BEFORE the last instruction
-        // (which is return-void). Using initCount appends AFTER return-void
-        // making the code unreachable dead code.
         val initMethod = SettingInitItemsFingerprint.method
         val initCount = initMethod.implementation?.instructions?.size
             ?: error("initSettingItems has no implementation")
 
-        initMethod.addInstructions(
-            initCount - 1,
-            """
-                # new SettingItem(Favorite, Option_New, 0, 0, 0, null)
-                new-instance             v0, Lcom/particlemedia/feature/settings/SettingItem;
-                sget-object              v1, Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;->Favorite:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;
-                sget-object              v2, Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;->Option_New:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;
-                const/4                  v3, 0x0
-                const/4                  v4, 0x0
-                const/4                  v5, 0x0
-                const/4                  v6, 0x0
-                invoke-direct/range      {v0 .. v6}, Lcom/particlemedia/feature/settings/SettingItem;-><init>(Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;IIILjava/lang/String;)V
+        // Inject BEFORE the last instruction (return-void).
+        // No comments in smali string — Morphe assembler may not handle # lines.
+        val smali = """
+new-instance v0, Lcom/particlemedia/feature/settings/SettingItem;
+sget-object v1, Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;->Favorite:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;
+sget-object v2, Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;->Option_New:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;
+const/4 v3, 0x0
+const/4 v4, 0x0
+const/4 v5, 0x0
+const/4 v6, 0x0
+invoke-direct/range {v0 .. v6}, Lcom/particlemedia/feature/settings/SettingItem;-><init>(Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;IIILjava/lang/String;)V
+const-string v1, "CrimeRadar+ Patches"
+iput-object v1, v0, Lcom/particlemedia/feature/settings/SettingItem;->nameString:Ljava/lang/String;
+const-string v1, "Tap for debug info"
+iput-object v1, v0, Lcom/particlemedia/feature/settings/SettingItem;->descStr:Ljava/lang/String;
+iget-object v1, p0, Lcom/particlemedia/feature/settings/SettingAdapter;->items:Ljava/util/ArrayList;
+invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+        """.trimIndent()
 
-                # item.nameString = "CrimeRadar+ Patches"
-                const-string             v1, "CrimeRadar+ Patches"
-                iput-object              v1, v0, Lcom/particlemedia/feature/settings/SettingItem;->nameString:Ljava/lang/String;
-
-                # item.descStr = "Tap for debug info"
-                const-string             v1, "Tap for debug info"
-                iput-object              v1, v0, Lcom/particlemedia/feature/settings/SettingItem;->descStr:Ljava/lang/String;
-
-                # this.items.add(item)
-                iget-object              v1, p0, Lcom/particlemedia/feature/settings/SettingAdapter;->items:Ljava/util/ArrayList;
-                invoke-virtual           {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-            """
-        )
+        initMethod.addInstructions(initCount - 1, smali)
     }
 }
