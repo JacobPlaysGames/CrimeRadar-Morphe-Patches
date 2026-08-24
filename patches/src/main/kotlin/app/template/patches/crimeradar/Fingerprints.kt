@@ -87,3 +87,21 @@ object HeadsUpPushFingerprint : Fingerprint(
     returnType = "Z",
     parameters = listOf("Lcom/particlemedia/data/PushData;")
 )
+
+// ── Debug Settings ──────────────────────────────────────────────────────
+
+object SettingInitItemsFingerprint : Fingerprint(
+    definingClass = "Lcom/particlemedia/feature/settings/SettingAdapter;",
+    name = "initSettingItems",
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object SettingOnClickFingerprint : Fingerprint(
+    definingClass = "Lcom/particlemedia/feature/settings/SettingAdapter;",
+    name = "onClick",
+    accessFlags = listOf(AccessFlags.PUBLIC),
+    returnType = "V",
+    parameters = listOf("Landroid/view/View;")
+)
