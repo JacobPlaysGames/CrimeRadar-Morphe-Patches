@@ -2,6 +2,23 @@
 
 ### 🐛 Bug Fixes
 
+* **crimeradar:** disable debug settings patch (causes settings crash) ([f582b87](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/f582b87078335b0e578d02ce221fb73f0a293555))
+* **crimeradar:** fix debug settings crash (wrong DEX field name id vs jadx f38808id) ([4d8b1e8](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/4d8b1e8df34a2472d6c8334aecf16097309cb3b9))
+* **crimeradar:** point patches-bundle.json to stable v1.3.1 (disable broken debug settings) ([0b91f61](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/0b91f6152983fbae5d97c4292ee08df41134f6fc))
+* **crimeradar:** remove broken notification range patch (crashes settings screen) ([5e51f24](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5e51f24c2fcc53915e6af9879badf45109935452))
+* **crimeradar:** update patches-bundle.json to v1.3.1 ([06071bf](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/06071bf0994308039d057ee16b25479f5c3b8ac4))
+* **crimeradar:** update patches-bundle.json to v1.4.0 ([98ca4fa](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/98ca4fa03eb7f4ec3dfc8185a8f9657e75766400))
+* **crimeradar:** update patches-bundle.json to v1.4.0 ([2ea1078](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/2ea107867f6e360f5f53e49d374d0ae12057c217))
+* **crimeradar:** update patches-bundle.json to v1.4.0 ([d7bc462](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/d7bc462b09f4b3d5dca1f8e03cd53bc2bb1ae4e0))
+
+### ✨ New Features
+
+* **crimeradar:** add debug settings panel to settings screen ([b7eb8c9](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/b7eb8c96cbc7942caf712a3de589182708f328e3))
+
+## [1.4.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.3.0...v1.4.0) (2026-08-24)
+
+### 🐛 Bug Fixes
+
 * **crimeradar:** fix debug settings crash (wrong DEX field name id vs jadx f38808id) ([4d8b1e8](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/4d8b1e8df34a2472d6c8334aecf16097309cb3b9))
 * **crimeradar:** remove broken notification range patch (crashes settings screen) ([5e51f24](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5e51f24c2fcc53915e6af9879badf45109935452))
 * **crimeradar:** update patches-bundle.json to v1.3.1 ([06071bf](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/06071bf0994308039d057ee16b25479f5c3b8ac4))
