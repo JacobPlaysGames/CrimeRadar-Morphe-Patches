@@ -28,6 +28,7 @@ val debugSettingsPatch = bytecodePatch(
     execute {
         // ── 1. Append "CrimeRadar+ Patches" entry at end of settings list ──
         // initSettingItems() clears items then adds them; we append AFTER everything.
+        // Register budget: v0-v6 only (7 locals) — conservative for small .locals counts.
         val initMethod = SettingInitItemsFingerprint.method
         val initCount = initMethod.implementation?.instructions?.size
             ?: error("initSettingItems has no implementation")
@@ -45,21 +46,23 @@ val debugSettingsPatch = bytecodePatch(
                 const/4                  v6, 0x0
                 invoke-direct/range      {v0 .. v6}, Lcom/particlemedia/feature/settings/SettingItem;-><init>(Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingType;IIILjava/lang/String;)V
 
-                # item.nameString = "CrimeRadar+ Patches"
-                const-string             v7, "CrimeRadar+ Patches"
-                iput-object              v7, v0, Lcom/particlemedia/feature/settings/SettingItem;->nameString:Ljava/lang/String;
+                # item.nameString = "CrimeRadar+ Patches"  (reuse v1, v7 not needed)
+                const-string             v1, "CrimeRadar+ Patches"
+                iput-object              v1, v0, Lcom/particlemedia/feature/settings/SettingItem;->nameString:Ljava/lang/String;
 
                 # item.descStr = "Tap for debug info"
-                const-string             v7, "Tap for debug info"
-                iput-object              v7, v0, Lcom/particlemedia/feature/settings/SettingItem;->descStr:Ljava/lang/String;
+                const-string             v1, "Tap for debug info"
+                iput-object              v1, v0, Lcom/particlemedia/feature/settings/SettingItem;->descStr:Ljava/lang/String;
 
                 # this.items.add(item)
-                iget-object              v8, p0, Lcom/particlemedia/feature/settings/SettingAdapter;->items:Ljava/util/ArrayList;
-                invoke-virtual           {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+                iget-object              v1, p0, Lcom/particlemedia/feature/settings/SettingAdapter;->items:Ljava/util/ArrayList;
+                invoke-virtual           {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
             """
         )
 
         // ── 2. Intercept onClick → show debug AlertDialog ──────────────────
+        // NOTE: SettingItem.id field is the REAL DEX name. jadx renames it to
+        // "f38808id" due to root-package collision — do NOT use that name.
         SettingOnClickFingerprint.method.addInstructions(
             0,
             """
@@ -70,7 +73,7 @@ val debugSettingsPatch = bytecodePatch(
                 instance-of              v1, v0, Lcom/particlemedia/feature/settings/SettingItem;
                 if-eqz                   v1, :original
                 check-cast               v0, Lcom/particlemedia/feature/settings/SettingItem;
-                iget-object              v0, v0, Lcom/particlemedia/feature/settings/SettingItem;->f38808id:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;
+                iget-object              v0, v0, Lcom/particlemedia/feature/settings/SettingItem;->id:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;
                 sget-object              v1, Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;->Favorite:Lcom/particlemedia/feature/settings/SettingItem${'$'}SettingId;
                 if-ne                    v0, v1, :original
 
