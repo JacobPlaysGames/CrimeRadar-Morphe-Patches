@@ -5,11 +5,6 @@ import com.android.tools.smali.dexlib2.AccessFlags
 
 // ── Premium Bypass ──────────────────────────────────────────────────────────
 
-/**
- * Fingerprint for PremiumEntitlementHelper.isPremiumActive().
- *
- * Entitlement layer choke point: ads, replay/audio limits, saved location count.
- */
 object PremiumActiveFingerprint : Fingerprint(
     definingClass = "Lcom/particlemedia/feature/subscription/PremiumEntitlementHelper;",
     name = "isPremiumActive",
@@ -18,11 +13,6 @@ object PremiumActiveFingerprint : Fingerprint(
     parameters = emptyList()
 )
 
-/**
- * Fingerprint for SubscriptionAccountHelper.shouldSuppressPremiumPromotions().
- *
- * Promotion/paywall layer choke point: all premium banners, cards, upgrade popups.
- */
 object SuppressPremiumPromotionsFingerprint : Fingerprint(
     definingClass = "Lcom/particlemedia/feature/subscription/SubscriptionAccountHelper;",
     name = "shouldSuppressPremiumPromotions",
@@ -31,11 +21,6 @@ object SuppressPremiumPromotionsFingerprint : Fingerprint(
     parameters = emptyList()
 )
 
-/**
- * Fingerprint for RadarMapSubscriptionGateway.isActiveNow().
- *
- * Gates the map "follow more locations" limit popup.
- */
 object IsActiveNowFingerprint : Fingerprint(
     definingClass = "Lcom/particlemedia/feature/subscription/RadarMapSubscriptionGateway;",
     name = "isActiveNow",
@@ -46,11 +31,6 @@ object IsActiveNowFingerprint : Fingerprint(
 
 // ── Replay Minutes ──────────────────────────────────────────────────────────
 
-/**
- * Fingerprint for Uh.b.Y() — daily free replay minutes.
- *
- * Returns 5 (free) or 20 (premium). Patched to return 999999.
- */
 object ReplayDailyMinutesFingerprint : Fingerprint(
     definingClass = "LUh/b;",
     name = "Y",
@@ -61,12 +41,6 @@ object ReplayDailyMinutesFingerprint : Fingerprint(
 
 // ── Telemetry Kill ──────────────────────────────────────────────────────────
 
-/**
- * Fingerprint for Ad.E.b() — Instabug initialization.
- *
- * Initializes Instabug SDK (bug reports, screenshots, session replay, APM).
- * Patched to no-op (return-void at index 0).
- */
 object InstabugInitFingerprint : Fingerprint(
     definingClass = "LAd/E;",
     name = "b",
@@ -75,12 +49,6 @@ object InstabugInitFingerprint : Fingerprint(
     parameters = emptyList()
 )
 
-/**
- * Fingerprint for Ad.C2071e.f(Application) — Adjust SDK initialization.
- *
- * Initializes Adjust for attribution/install tracking (reads GAID, IMEI, OAID).
- * Patched to no-op (return-void at index 0).
- */
 object AdjustInitFingerprint : Fingerprint(
     definingClass = "Lad/e;",
     name = "f",
@@ -91,12 +59,6 @@ object AdjustInitFingerprint : Fingerprint(
 
 // ── History Cap ─────────────────────────────────────────────────────────────
 
-/**
- * Fingerprint for cd.d.createQuery() — Room migration SQL queries.
- *
- * Case 3 returns "DELETE from history_docs where _id < (SELECT ... OFFSET 200)".
- * Patched: when this.a == 3, return "SELECT 1" (no-op) to remove the 200-item cap.
- */
 object HistoryCapFingerprint : Fingerprint(
     definingClass = "Lcd/d;",
     name = "createQuery",
@@ -107,12 +69,6 @@ object HistoryCapFingerprint : Fingerprint(
 
 // ── Notification Limits ─────────────────────────────────────────────────────
 
-/**
- * Fingerprint for NotificationFrequencyManager.isUnderFreqLimit().
- *
- * Per-category daily push cap (default 25-50). Returns true when over limit.
- * Patched to always return false (never block pushes).
- */
 object NotificationFrequencyFingerprint : Fingerprint(
     definingClass = "Lcom/particlemedia/feature/push/frequency/NotificationFrequencyManager;",
     name = "isUnderFreqLimit",
@@ -124,15 +80,33 @@ object NotificationFrequencyFingerprint : Fingerprint(
     )
 )
 
-/**
- * Fingerprint for HeadsUpPushMgr.shouldShowHeadsUpPush().
- *
- * Heads-up push daily limit (default 1). Patched to always return true.
- */
 object HeadsUpPushFingerprint : Fingerprint(
     definingClass = "Lcom/particlemedia/feature/push/headsup/HeadsUpPushMgr;",
     name = "shouldShowHeadsUpPush",
     accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
     returnType = "Z",
     parameters = listOf("Lcom/particlemedia/data/PushData;")
+)
+
+// ── Notification Range ──────────────────────────────────────────────────────
+
+/**
+ * Fingerprint for ManagementAlertsAdapter.buildNewSetAlertSettings().
+ *
+ * Builds the protobuf AlertSettings sent to server. The newRadius parameter
+ * (p2, Integer) comes from sliderOptions = {null, 10, 5, 3, 1} miles.
+ * Patched to multiply by 5: 10→50, 5→25, 3→15, 1→5 miles.
+ */
+object NotificationRangeFingerprint : Fingerprint(
+    definingClass = "Lcom/particlemedia/feature/map/ManagementAlertsAdapter;",
+    name = "buildNewSetAlertSettings",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Lcom/api/schema/crimeradar/v1/Crimeradar\$AlertSettings;",
+    parameters = listOf(
+        "Lcom/api/schema/crimeradar/v1/Crimeradar\$AlertSettings;",
+        "Ljava/lang/Integer;",
+        "Ljava/lang/Boolean;",
+        "Ljava/lang/String;",
+        "Ljava/lang/Boolean;"
+    )
 )
