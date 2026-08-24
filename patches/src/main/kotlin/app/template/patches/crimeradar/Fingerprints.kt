@@ -108,9 +108,9 @@ object InstabugInitFingerprint : Fingerprint(
  * Patched to no-op (return-void at index 0).
  */
 object AdjustInitFingerprint : Fingerprint(
-    definingClass = "LAd/C2071e;",
+    definingClass = "Lad/e;",
     name = "f",
-    accessFlags = listOf(AccessFlags.PUBLIC),
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = listOf("Landroid/app/Application;")
 )
@@ -126,7 +126,7 @@ object AdjustInitFingerprint : Fingerprint(
 object HistoryCapFingerprint : Fingerprint(
     definingClass = "Lcd/d;",
     name = "createQuery",
-    accessFlags = listOf(AccessFlags.PUBLIC),
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "Ljava/lang/String;",
     parameters = emptyList()
 )
