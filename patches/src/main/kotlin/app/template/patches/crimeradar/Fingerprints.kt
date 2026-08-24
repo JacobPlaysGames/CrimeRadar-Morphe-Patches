@@ -97,11 +97,3 @@ object SettingInitItemsFingerprint : Fingerprint(
     returnType = "V",
     parameters = emptyList()
 )
-
-object SettingOnClickFingerprint : Fingerprint(
-    definingClass = "Lcom/particlemedia/feature/settings/SettingAdapter;",
-    name = "onClick",
-    accessFlags = listOf(AccessFlags.PUBLIC),
-    returnType = "V",
-    parameters = listOf("Landroid/view/View;")
-)
