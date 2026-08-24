@@ -21,7 +21,7 @@ import app.template.patches.shared.Constants.COMPATIBILITY_CRIMERADAR
 val debugSettingsPatch = bytecodePatch(
     name = "Debug Settings",
     description = "Adds a CrimeRadar+ debug info panel to the settings screen.",
-    default = true
+    default = false
 ) {
     compatibleWith(COMPATIBILITY_CRIMERADAR)
 
