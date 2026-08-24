@@ -72,19 +72,6 @@ object ReplayDailyMinutesFingerprint : Fingerprint(
     parameters = emptyList()
 )
 
-/**
- * Fingerprint for Uh.b.Z() — reward extra replay minutes.
- *
- * Returns 15 (free) or 0 (premium). Patched to return 999999.
- */
-object ReplayExtraMinutesFingerprint : Fingerprint(
-    definingClass = "LUh/b;",
-    name = "Z",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC, AccessFlags.FINAL),
-    returnType = "I",
-    parameters = emptyList()
-)
-
 // ── Telemetry Kill ──────────────────────────────────────────────────────────
 
 /**
