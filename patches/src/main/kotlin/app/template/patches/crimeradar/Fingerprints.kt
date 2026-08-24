@@ -44,19 +44,6 @@ object IsActiveNowFingerprint : Fingerprint(
     parameters = emptyList()
 )
 
-/**
- * Fingerprint for GLocationList.getLimit().
- *
- * Returns the server-sent location limit (default 1 for free users).
- */
-object GetLimitFingerprint : Fingerprint(
-    definingClass = "Lcom/particlemedia/feature/map/data/GLocationList;",
-    name = "getLimit",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    returnType = "I",
-    parameters = emptyList()
-)
-
 // ── Replay Minutes ──────────────────────────────────────────────────────────
 
 /**

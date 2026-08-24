@@ -17,8 +17,9 @@ import app.template.patches.shared.Constants.COMPATIBILITY_CRIMERADAR
  * 3. RadarMapSubscriptionGateway.isActiveNow() → true
  *    Map layer: "follow more locations" limit popup → paywall.
  *
- * 4. GLocationList.getLimit() → 999
- *    Overrides server-sent location limit so client allows unlimited follows.
+ * Note: Server-side location limits are NOT bypassed — the API rejects saves
+ * beyond the account's real limit (error 816). Only client-side UI checks
+ * are overridden.
  */
 @Suppress("unused")
 val premiumBypassPatch = bytecodePatch(
@@ -54,15 +55,5 @@ val premiumBypassPatch = bytecodePatch(
                 const/4 v0, 0x1
                 return v0
             """
-        )
-
-        // Override server-sent location limit (default 1 → 999)
-        GetLimitFingerprint.method.addInstructions(
-            0,
-            """
-                const/16 v0, 0x3E7
-                return v0
-            """
-        )
-    }
+        )    }
 }
