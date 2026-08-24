@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.2.1...v1.2.2) (2026-08-24)
+
+### 🐛 Bug Fixes
+
+* **crimeradar:** remove server-enforced location limit patch (does not work) ([c472bee](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/c472beecd80b091530d87de28b5677f32b1ef466))
+
 ## [1.2.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.2.0...v1.2.1) (2026-08-24)
 
 ### 🐛 Bug Fixes
