@@ -15,7 +15,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.4.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.4.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;8 patches total
+> **[v1.4.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.4.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;8 patches total
 <details open>
 <summary>📦 CrimeRadar&nbsp;&nbsp;•&nbsp;&nbsp;8 patches</summary>
 <br>
@@ -29,7 +29,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 |----------|----------------|-----------|
 | [Branding](#branding) | Changes app name to 'CrimeRadar+' and tints the icon for easy identification. |  |
 | [Change package name](#change-package-name) | Changes the app package name to allow installing alongside the original. | • New package name |
-| [Debug Settings](#debug-settings) | Adds a CrimeRadar+ debug info panel to the settings screen. |  |
+| [Debug Settings](#debug-settings) | Adds a CrimeRadar+ debug info entry to the settings screen. |  |
 | [Notification Limits Raised](#notification-limits-raised) | Raises per-category daily push caps and heads-up push limits. |  |
 | [Premium Bypass](#premium-bypass) | Bypasses premium subscription checks to unlock all premium features. |  |
 | [Remove History Cap](#remove-history-cap) | Removes the 200-item local reading history limit. |  |
