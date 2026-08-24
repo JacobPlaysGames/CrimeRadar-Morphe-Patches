@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.3.0...v1.3.1) (2026-08-24)
+
+### 🐛 Bug Fixes
+
+* **crimeradar:** remove broken notification range patch (crashes settings screen) ([5e51f24](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5e51f24c2fcc53915e6af9879badf45109935452))
+
 ## [1.3.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.2.2...v1.3.0) (2026-08-24)
 
 ### 🐛 Bug Fixes
