@@ -87,26 +87,3 @@ object HeadsUpPushFingerprint : Fingerprint(
     returnType = "Z",
     parameters = listOf("Lcom/particlemedia/data/PushData;")
 )
-
-// ── Notification Range ──────────────────────────────────────────────────────
-
-/**
- * Fingerprint for ManagementAlertsAdapter.buildNewSetAlertSettings().
- *
- * Builds the protobuf AlertSettings sent to server. The newRadius parameter
- * (p2, Integer) comes from sliderOptions = {null, 10, 5, 3, 1} miles.
- * Patched to multiply by 5: 10→50, 5→25, 3→15, 1→5 miles.
- */
-object NotificationRangeFingerprint : Fingerprint(
-    definingClass = "Lcom/particlemedia/feature/map/ManagementAlertsAdapter;",
-    name = "buildNewSetAlertSettings",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    returnType = "Lcom/api/schema/crimeradar/v1/Crimeradar\$AlertSettings;",
-    parameters = listOf(
-        "Lcom/api/schema/crimeradar/v1/Crimeradar\$AlertSettings;",
-        "Ljava/lang/Integer;",
-        "Ljava/lang/Boolean;",
-        "Ljava/lang/String;",
-        "Ljava/lang/Boolean;"
-    )
-)
