@@ -46,8 +46,140 @@
       ]
     },
     {
+      "name": "Notification Limits Raised",
+      "description": "Raises per-category daily push caps and heads-up push limits.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.newsbreak.crimeradar",
+          "name": "CrimeRadar",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#B71C1C",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "26.33.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Premium Bypass",
       "description": "Bypasses premium subscription checks to unlock all premium features.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.newsbreak.crimeradar",
+          "name": "CrimeRadar",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#B71C1C",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "26.33.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Remove History Cap",
+      "description": "Removes the 200-item local reading history limit.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.newsbreak.crimeradar",
+          "name": "CrimeRadar",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#B71C1C",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "26.33.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Replay Minutes Override",
+      "description": "Overrides daily replay listening time limits to unlimited.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.newsbreak.crimeradar",
+          "name": "CrimeRadar",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#B71C1C",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "26.33.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Telemetry Kill",
+      "description": "Disables Instabug and Adjust telemetry SDKs for privacy.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
