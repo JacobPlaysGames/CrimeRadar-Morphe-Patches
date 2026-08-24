@@ -8,6 +8,18 @@
 
 * **crimeradar:** add branding patch (app name 'CrimeRadar+' + purple icon tint) ([9d0db33](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/9d0db33db9027315f3c8bee0a6d71b36f51cf1e9))
 * **crimeradar:** add notification range patch (5x radius multiplier) ([cb37773](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/cb37773d301968e42d9e8d5ab862d6094baa781a))
+* **crimeradar:** notification range extended (5x radius multiplier) ([19979fe](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/19979fe0ae9b8f3cb2f6c2dfe9b85bd9ff18d6a6))
+
+## [1.3.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.2.2...v1.3.0) (2026-08-24)
+
+### 🐛 Bug Fixes
+
+* **crimeradar:** update patches-bundle.json to v1.3.0 ([020f8b8](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/020f8b86b1e3cc813b5891e8940c621f027654e4))
+
+### ✨ New Features
+
+* **crimeradar:** add branding patch (app name 'CrimeRadar+' + purple icon tint) ([9d0db33](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/9d0db33db9027315f3c8bee0a6d71b36f51cf1e9))
+* **crimeradar:** add notification range patch (5x radius multiplier) ([cb37773](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/cb37773d301968e42d9e8d5ab862d6094baa781a))
 
 ## [1.3.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.2.2...v1.3.0) (2026-08-24)
 
