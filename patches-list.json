@@ -81,7 +81,7 @@
     {
       "name": "Debug Settings",
       "description": "Adds a CrimeRadar+ debug info entry to the settings screen.",
-      "default": true,
+      "default": false,
       "dependencies": [],
       "compatiblePackages": [
         {

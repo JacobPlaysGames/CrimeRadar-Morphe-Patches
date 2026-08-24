@@ -2,6 +2,17 @@
 
 ### 🐛 Bug Fixes
 
+* **crimeradar:** disable debug settings patch (default=false) ([5d16621](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/5d1662140520f41e483056d0709266beb8ddcbbc))
+* **crimeradar:** fix debug settings patch (insert before return-void, remove onClick) ([41847f7](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/41847f737485c3f4cbc2875a440d8c96953bb7f9))
+* **crimeradar:** point patches-bundle.json to v1.3.1 (v1.4.0 asset deleted) ([c69e362](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/c69e3628aa49ddf0f45be8722bb2aa5272dcc895))
+* **crimeradar:** update patches-bundle.json to v1.4.0 (fixed debug settings) ([b76dada](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/b76dadaba784d522e511719ef80c7e6ee4e7ed7c))
+* **crimeradar:** update patches-bundle.json to v1.4.0 (published release) ([1569505](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/15695055938ef1af63d63b5a059674a65d727424))
+* **crimeradar:** update patches-bundle.json to v1.4.1 ([e23487d](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/e23487dcbac5a1313c065d6918bf8ef83796b9c3))
+
+## [1.4.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.4.0...v1.4.1) (2026-08-24)
+
+### 🐛 Bug Fixes
+
 * **crimeradar:** fix debug settings patch (insert before return-void, remove onClick) ([41847f7](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/41847f737485c3f4cbc2875a440d8c96953bb7f9))
 * **crimeradar:** point patches-bundle.json to v1.3.1 (v1.4.0 asset deleted) ([c69e362](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/c69e3628aa49ddf0f45be8722bb2aa5272dcc895))
 * **crimeradar:** update patches-bundle.json to v1.4.0 (fixed debug settings) ([b76dada](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/b76dadaba784d522e511719ef80c7e6ee4e7ed7c))
