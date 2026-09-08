@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.5.0...v1.6.0) (2026-09-08)
+
+### ✨ New Features
+
+* **scannerradio:** make patches version-agnostic ([9c74cc8](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/9c74cc8783b61a27b0cb1e7a3a3ec78e3db625ef))
+
 ## [1.5.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.4.0...v1.5.0) (2026-09-08)
 
 ### 🐛 Bug Fixes
