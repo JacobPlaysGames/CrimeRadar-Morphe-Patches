@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.4.1",
+  "version": "1.5.0-dev.1",
   "patches": [
     {
       "name": "Branding",
@@ -25,6 +25,32 @@
             },
             {
               "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Branding",
+      "description": "Changes app name to 'Scanner Radio+' and tints the icon for easy identification.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.scannerradio",
+          "name": "Scanner Radio",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#2196F3",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "8.21.1",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -74,6 +100,42 @@
           "required": true,
           "type": "kotlin.String",
           "default": "com.newsbreak.crimeradar.patched",
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Change package name",
+      "description": "Changes the app package name to allow installing alongside the original.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.scannerradio",
+          "name": "Scanner Radio",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#2196F3",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "8.21.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "packageName",
+          "title": "New package name",
+          "description": null,
+          "required": true,
+          "type": "kotlin.String",
+          "default": "com.scannerradio.patched",
           "values": null
         }
       ]
@@ -178,6 +240,32 @@
       "options": []
     },
     {
+      "name": "Premium Bypass",
+      "description": "Bypasses premium subscription checks to unlock all premium features.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.scannerradio",
+          "name": "Scanner Radio",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#2196F3",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "8.21.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Remove History Cap",
       "description": "Removes the 200-item local reading history limit.",
       "default": true,
@@ -266,94 +354,6 @@
             },
             {
               "version": "26.34.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Branding",
-      "description": "Changes app name to 'Scanner Radio+' and tints the icon for easy identification.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.scannerradio",
-          "name": "Scanner Radio",
-          "description": null,
-          "apkFileType": "APK",
-          "appIconColor": "#2196F3",
-          "signatures": null,
-          "targets": [
-            {
-              "version": "8.21.1",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Change package name",
-      "description": "Changes the app package name to allow installing alongside the original.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.scannerradio",
-          "name": "Scanner Radio",
-          "description": null,
-          "apkFileType": "APK",
-          "appIconColor": "#2196F3",
-          "signatures": null,
-          "targets": [
-            {
-              "version": "8.21.1",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": [
-        {
-          "key": "packageName",
-          "title": "New package name",
-          "description": null,
-          "required": true,
-          "type": "kotlin.String",
-          "default": "com.scannerradio.patched",
-          "values": null
-        }
-      ]
-    },
-    {
-      "name": "Premium Bypass",
-      "description": "Bypasses premium subscription checks to unlock all premium features.",
-      "default": true,
-      "dependencies": [],
-      "compatiblePackages": [
-        {
-          "packageName": "com.scannerradio",
-          "name": "Scanner Radio",
-          "description": null,
-          "apkFileType": "APK",
-          "appIconColor": "#2196F3",
-          "signatures": null,
-          "targets": [
-            {
-              "version": "8.21.1",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
