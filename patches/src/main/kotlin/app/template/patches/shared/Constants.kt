@@ -25,11 +25,7 @@ object Constants {
         name = "Scanner Radio",
         packageName = "com.scannerradio",
         apkFileType = ApkFileType.APK,
-        appIconColor = 0x2196F3, // Blue, matching Scanner Radio icon
-        targets = listOf(
-            AppTarget(
-                version = "8.21.1"
-            )
-        )
+        appIconColor = 0x2196F3 // Blue, matching Scanner Radio icon
+        // Omit targets → defaults to AppTarget(version = null) → any version
     )
 }
