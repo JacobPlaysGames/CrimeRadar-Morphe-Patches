@@ -21,5 +21,15 @@ object Constants {
         )
     )
 
-
+    val COMPATIBILITY_SCANNERRADIO = Compatibility(
+        name = "Scanner Radio",
+        packageName = "com.scannerradio",
+        apkFileType = ApkFileType.APK,
+        appIconColor = 0x2196F3, // Blue, matching Scanner Radio icon
+        targets = listOf(
+            AppTarget(
+                version = "8.21.1"
+            )
+        )
+    )
 }
