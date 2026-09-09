@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.7.5",
+  "version": "1.8.0",
   "patches": [
     {
       "name": "Branding",
@@ -196,6 +196,32 @@
             },
             {
               "version": "26.34.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Pairip DRM Bypass",
+      "description": "Disables Pairip DRM/integrity checks that crash patched APKs on startup.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.scannerradio",
+          "name": "Scanner Radio",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#2196F3",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "8.29",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,

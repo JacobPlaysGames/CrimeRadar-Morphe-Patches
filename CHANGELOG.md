@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.5...v1.8.0) (2026-09-09)
+
+### ✨ New Features
+
+* **scannerradio:** add Pairip DRM bypass to fix startup SIGSEGV ([e96b89a](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/e96b89abdcdb606575325f550d97e199e7ce4a45))
+
 ## [1.7.5](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.4...v1.7.5) (2026-09-09)
 
 ### 🐛 Bug Fixes
