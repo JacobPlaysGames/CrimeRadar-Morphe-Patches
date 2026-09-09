@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-09-09T17:49:18",
-  "description": "## [1.8.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.5...v1.8.0) (2026-09-09)\n\n### ✨ New Features\n\n* **scannerradio:** add Pairip DRM bypass to fix startup SIGSEGV ([e96b89a](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/e96b89abdcdb606575325f550d97e199e7ce4a45))",
-  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.8.0/patches-1.8.0.mpp",
+  "created_at": "2026-09-09T18:05:22",
+  "description": "## [1.8.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.0...v1.8.1) (2026-09-09)\n\n### 🐛 Bug Fixes\n\n* **scannerradio:** no-op MyApplication.onCreate() pairip-injected IronSource reflection ([643a58a](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/643a58a4368114cd46a4d805c672dd24f395a5b2))",
+  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.8.1/patches-1.8.1.mpp",
   "signature_download_url": "",
-  "version": "1.8.0"
+  "version": "1.8.1"
 }

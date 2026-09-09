@@ -1,3 +1,9 @@
+## [1.8.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.0...v1.8.1) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** no-op MyApplication.onCreate() pairip-injected IronSource reflection ([643a58a](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/643a58a4368114cd46a4d805c672dd24f395a5b2))
+
 ## [1.8.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.5...v1.8.0) (2026-09-09)
 
 ### ✨ New Features
