@@ -64,7 +64,6 @@ val pairipBypassPatch = bytecodePatch(
         MyApplicationOnCreateFingerprint.method.addInstructions(
             0,
             """
-                # Initialize R8 string dedup class to prevent null NPEs
                 const-string v0, ""
                 sput-object v0, Landroidx/media3/common/util/yx/sjJeZY;->AKHhGmPEdtQeTh:Ljava/lang/String;
                 sput-object v0, Landroidx/media3/common/util/yx/sjJeZY;->AlwMp:Ljava/lang/String;
@@ -106,7 +105,6 @@ val pairipBypassPatch = bytecodePatch(
                 sput-object v0, Landroidx/media3/common/util/yx/sjJeZY;->xcKUSBkAGf:Ljava/lang/String;
                 sput-object v0, Landroidx/media3/common/util/yx/sjJeZY;->yIVln:Ljava/lang/String;
                 sput-object v0, Landroidx/media3/common/util/yx/sjJeZY;->ylxvNVigUXZjc:Ljava/lang/String;
-                # Now call parent onCreate() for Hilt DI setup
                 invoke-super {p0}, Lcom/scannerradio/a;->onCreate()V
                 return-void
             """
