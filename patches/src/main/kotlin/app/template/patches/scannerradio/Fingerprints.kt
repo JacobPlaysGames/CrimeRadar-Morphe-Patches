@@ -1,14 +1,12 @@
 package app.template.patches.scannerradio
 
 import app.morphe.patcher.Fingerprint
-import com.android.tools.smali.dexlib2.AccessFlags
 
 // ── Premium Bypass ──────────────────────────────────────────────────────────
 
 object IsProVersionFingerprint : Fingerprint(
     definingClass = "Lhm0;",
     name = "a0",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "Z",
     parameters = emptyList()
 )
@@ -18,7 +16,6 @@ object IsProVersionFingerprint : Fingerprint(
 object InMobiInitFingerprint : Fingerprint(
     definingClass = "Lcom/inmobi/sdk/InMobiSdk;",
     name = "init",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
     returnType = "V",
     parameters = listOf(
         "Landroid/content/Context;",
@@ -31,7 +28,6 @@ object InMobiInitFingerprint : Fingerprint(
 object FairBidInitFingerprint : Fingerprint(
     definingClass = "Lcom/fyber/a;",
     name = "start",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
     returnType = "V",
     parameters = listOf("Ljava/lang/String;", "Landroid/content/Context;")
 )
@@ -41,7 +37,6 @@ object FairBidInitFingerprint : Fingerprint(
 object ShowBannerAdsFingerprint : Fingerprint(
     definingClass = "Lj8;",
     name = "i",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = emptyList()
 )
@@ -49,7 +44,6 @@ object ShowBannerAdsFingerprint : Fingerprint(
 object ShowInterstitialAdsFingerprint : Fingerprint(
     definingClass = "Lj8;",
     name = "j",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = emptyList()
 )
