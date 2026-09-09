@@ -1,3 +1,9 @@
+## [1.7.2-dev.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.1...v1.7.2-dev.1) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** use real smali class names not jadx deobfuscated names ([c1d8f13](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/c1d8f13474276dd606af7da4b5e2b334f950a826))
+
 ## [1.7.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.0...v1.7.1) (2026-09-09)
 
 ### 🐛 Bug Fixes
