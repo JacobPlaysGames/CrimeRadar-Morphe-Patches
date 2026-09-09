@@ -15,7 +15,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.7.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.7.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;12 patches total
+> **[v1.7.1-dev.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/tag/v1.7.1-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;12 patches total
 <details open>
 <summary>📦 CrimeRadar&nbsp;&nbsp;•&nbsp;&nbsp;8 patches</summary>
 <br>
@@ -41,6 +41,11 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 <details open>
 <summary>📦 Scanner Radio&nbsp;&nbsp;•&nbsp;&nbsp;4 patches</summary>
 <br>
+
+**🎯 Supported versions:**
+
+| 8.29 |
+| :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
