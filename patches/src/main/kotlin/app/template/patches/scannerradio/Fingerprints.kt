@@ -60,6 +60,19 @@ object PairipApplicationFingerprint : Fingerprint(
     parameters = listOf("Landroid/content/Context;")
 )
 
+/**
+ * Entry point 3: MyApplication.onCreate() has pairip-injected IronSource reflection:
+ *   TTvRdCYPAWUKRE.ztV.invoke(null, this)
+ * ztV is null because VMRunner never initialized → NPE crash.
+ * No-op the entire method — app init happens via attachBaseContext + idle handlers.
+ */
+object MyApplicationOnCreateFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/MyApplication;",
+    name = "onCreate",
+    returnType = "V",
+    parameters = emptyList()
+)
+
 // ── Ad Kill ─────────────────────────────────────────────────────────────────
 
 object ShowBannerAdsFingerprint : Fingerprint(

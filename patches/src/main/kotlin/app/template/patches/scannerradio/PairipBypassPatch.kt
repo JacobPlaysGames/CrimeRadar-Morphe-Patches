@@ -18,6 +18,10 @@ import app.template.patches.shared.Constants.COMPATIBILITY_SCANNERRADIO
  *    - SignatureCheck.verifyIntegrity() → throws SignatureTamperedException on re-sign
  *    - LicenseClient.checkLicense()    → Play Store license verification
  *    Fix: Replace entire method body with just super.attachBaseContext(context).
+ *
+ * 3. MyApplication.onCreate(): pairip injected IronSource reflection
+ *    TTvRdCYPAWUKRE.ztV.invoke(null, this) — ztV is null → NPE crash.
+ *    Fix: No-op the method; app init runs via attachBaseContext + idle handlers.
  */
 @Suppress("unused")
 val pairipBypassPatch = bytecodePatch(
@@ -44,6 +48,14 @@ val pairipBypassPatch = bytecodePatch(
                 invoke-super {p0, p1}, Lcom/scannerradio/MyApplication;->attachBaseContext(Landroid/content/Context;)V
                 return-void
             """
+        )
+
+        // Fix 3: No-op MyApplication.onCreate() to remove pairip-injected IronSource reflection.
+        // Original body: TTvRdCYPAWUKRE.ztV.invoke(null, this) → NPE because ztV is null.
+        // App init runs via attachBaseContext prewarm threads + idle handlers, not onCreate.
+        MyApplicationOnCreateFingerprint.method.addInstructions(
+            0,
+            "return-void"
         )
     }
 }
