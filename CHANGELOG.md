@@ -1,3 +1,9 @@
+## [1.7.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.0...v1.7.1) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** update fingerprints for v8.29 ProGuard mapping ([d2efc9e](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/d2efc9e46db64f505583c5fc86a7b22843f209ca))
+
 ## [1.7.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.6.0...v1.7.0) (2026-09-09)
 
 ### ✨ New Features
