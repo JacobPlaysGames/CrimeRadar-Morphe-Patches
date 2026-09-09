@@ -1,3 +1,9 @@
+## [1.8.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.1...v1.8.2) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** call parent onCreate() instead of no-op to preserve Hilt DI ([c2bfad6](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/c2bfad63b5009ec1257c7ac3bf1e101e45d535ce))
+
 ## [1.8.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.0...v1.8.1) (2026-09-09)
 
 ### 🐛 Bug Fixes
