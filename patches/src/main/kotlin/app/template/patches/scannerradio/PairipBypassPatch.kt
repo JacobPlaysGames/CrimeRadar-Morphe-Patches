@@ -50,12 +50,17 @@ val pairipBypassPatch = bytecodePatch(
             """
         )
 
-        // Fix 3: No-op MyApplication.onCreate() to remove pairip-injected IronSource reflection.
-        // Original body: TTvRdCYPAWUKRE.ztV.invoke(null, this) → NPE because ztV is null.
-        // App init runs via attachBaseContext prewarm threads + idle handlers, not onCreate.
+        // Fix 3: Replace MyApplication.onCreate() body.
+        // Original body: TTvRdCYPAWUKRE.ztV.invoke(null, this) → pairip IronSource reflection, NPE.
+        // Replace with call to parent (com.scannerradio.a) which runs hiltInternalInject()
+        // and super.onCreate(). This is critical — hiltInternalInject() sets up logger,
+        // config, workerFactory, clips, headlines, and all Hilt DI fields.
         MyApplicationOnCreateFingerprint.method.addInstructions(
             0,
-            "return-void"
+            """
+                invoke-super {p0}, Lcom/scannerradio/a;->onCreate()V
+                return-void
+            """
         )
     }
 }
