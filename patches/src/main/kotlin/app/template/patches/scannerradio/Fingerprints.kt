@@ -32,6 +32,34 @@ object FairBidInitFingerprint : Fingerprint(
     parameters = listOf("Ljava/lang/String;", "Landroid/content/Context;")
 )
 
+// ── Pairip DRM Bypass ──────────────────────────────────────────────────────
+
+/**
+ * Entry point 1: CoreComponentFactory.<clinit>() calls StartupLauncher.launch()
+ * which triggers VMRunner → System.loadLibrary("pairipcore") → native SIGSEGV.
+ * No-op launch() to prevent the chain from starting.
+ */
+object StartupLauncherFingerprint : Fingerprint(
+    definingClass = "Lcom/pairip/StartupLauncher;",
+    name = "launch",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+/**
+ * Entry point 2: com.pairip.application.Application.attachBaseContext() calls:
+ *   VMRunner.setContext(context)       → loads native lib → CRASH
+ *   SignatureCheck.verifyIntegrity()   → throws on re-sign
+ *   LicenseClient.checkLicense()       → Play Store license check
+ * Replace entire body with just super.attachBaseContext(context).
+ */
+object PairipApplicationFingerprint : Fingerprint(
+    definingClass = "Lcom/pairip/application/Application;",
+    name = "attachBaseContext",
+    returnType = "V",
+    parameters = listOf("Landroid/content/Context;")
+)
+
 // ── Ad Kill ─────────────────────────────────────────────────────────────────
 
 object ShowBannerAdsFingerprint : Fingerprint(
