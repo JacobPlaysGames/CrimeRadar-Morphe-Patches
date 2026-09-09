@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-09-09T16:15:55",
-  "description": "## [1.7.1](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.0...v1.7.1) (2026-09-09)\n\n### 🐛 Bug Fixes\n\n* **scannerradio:** update fingerprints for v8.29 ProGuard mapping ([d2efc9e](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/d2efc9e46db64f505583c5fc86a7b22843f209ca))",
-  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.7.1/patches-1.7.1.mpp",
+  "created_at": "2026-09-09T16:26:59",
+  "description": "## [1.7.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.1...v1.7.2) (2026-09-09)\n\n### 🐛 Bug Fixes\n\n* **scannerradio:** use real smali class names not jadx deobfuscated names ([c1d8f13](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/c1d8f13474276dd606af7da4b5e2b334f950a826))",
+  "download_url": "https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/releases/download/v1.7.2/patches-1.7.2.mpp",
   "signature_download_url": "",
-  "version": "1.7.1"
+  "version": "1.7.2"
 }
