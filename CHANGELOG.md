@@ -1,3 +1,9 @@
+## [1.7.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.6.0...v1.7.0) (2026-09-09)
+
+### ✨ New Features
+
+* **scannerradio:** add minSdk=29 to Scanner Radio target ([f5fa369](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/f5fa36949b2bc6da0b1877ce9903dd9863476ecf))
+
 ## [1.6.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.5.0...v1.6.0) (2026-09-08)
 
 ### ✨ New Features
