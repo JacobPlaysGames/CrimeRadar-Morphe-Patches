@@ -1,3 +1,9 @@
+## [1.7.5](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.4...v1.7.5) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** remove broken File() operations from BrandingPatch ([33cab2b](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/33cab2b3bcf6c1039e6359de5216c4cd4330c21b))
+
 ## [1.7.4](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.3...v1.7.4) (2026-09-09)
 
 ### 🐛 Bug Fixes

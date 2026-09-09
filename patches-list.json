@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "patches": [
     {
       "name": "Branding",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Branding",
-      "description": "Changes app name to 'Scanner Radio+' and tints the icon for easy identification.",
+      "description": "Changes app name to 'Scanner Radio+' for easy identification.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
