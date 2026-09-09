@@ -6,8 +6,8 @@ import com.android.tools.smali.dexlib2.AccessFlags
 // ── Premium Bypass ──────────────────────────────────────────────────────────
 
 object IsProVersionFingerprint : Fingerprint(
-    definingClass = "Lyf/c;",
-    name = "V",
+    definingClass = "Ldefpackage/hm0;",
+    name = "a0",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "Z",
     parameters = emptyList()
@@ -39,16 +39,16 @@ object FairBidInitFingerprint : Fingerprint(
 // ── Ad Kill ─────────────────────────────────────────────────────────────────
 
 object ShowBannerAdsFingerprint : Fingerprint(
-    definingClass = "Lkg/g;",
-    name = "e",
+    definingClass = "Ldefpackage/j8;",
+    name = "i",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = emptyList()
 )
 
 object ShowInterstitialAdsFingerprint : Fingerprint(
-    definingClass = "Lkg/g;",
-    name = "g",
+    definingClass = "Ldefpackage/j8;",
+    name = "j",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = emptyList()
