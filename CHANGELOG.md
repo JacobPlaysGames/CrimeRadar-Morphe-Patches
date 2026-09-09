@@ -1,3 +1,9 @@
+## [1.8.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.2...v1.8.3) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** init R8 string dedup fields to prevent sjJeZY NPE ([cd680b3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/cd680b305be9b96ff7e18af182fb52ccf8d422ba))
+
 ## [1.8.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.1...v1.8.2) (2026-09-09)
 
 ### 🐛 Bug Fixes
