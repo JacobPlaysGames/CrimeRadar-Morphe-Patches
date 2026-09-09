@@ -1,3 +1,9 @@
+## [1.7.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.2...v1.7.3) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** InMobi SdkInitializationListener is standalone in v8.29 ([af931ae](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/af931ae1d7f5f514954690c42e23098380d00e1b))
+
 ## [1.7.2](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.1...v1.7.2) (2026-09-09)
 
 ### 🐛 Bug Fixes
