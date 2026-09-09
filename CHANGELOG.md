@@ -1,3 +1,9 @@
+## [1.7.4](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.3...v1.7.4) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** remove accessFlags from fingerprints ([8d2e929](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/8d2e929713f964a4e78210c8705554091fa0a341))
+
 ## [1.7.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.7.2...v1.7.3) (2026-09-09)
 
 ### 🐛 Bug Fixes
