@@ -24,7 +24,7 @@ object InMobiInitFingerprint : Fingerprint(
         "Landroid/content/Context;",
         "Ljava/lang/String;",
         "Lorg/json/JSONObject;",
-        "Lcom/inmobi/sdk/InMobiSdk\$SdkInitializationListener;"
+        "Lcom/inmobi/sdk/SdkInitializationListener;"
     )
 )
 
