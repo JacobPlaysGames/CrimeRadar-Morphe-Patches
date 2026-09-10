@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.6...v1.9.0) (2026-09-10)
+
+### ✨ New Features
+
+* **scannerradio:** patch all 12 pairip-injected lifecycle methods ([a96f165](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/a96f16525fc9cd2246821f786034a0cd7e4e5a71))
+
 ## [1.8.6](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.5...v1.8.6) (2026-09-10)
 
 ### 🐛 Bug Fixes
