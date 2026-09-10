@@ -1,3 +1,9 @@
+## [1.8.4](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.3...v1.8.4) (2026-09-10)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** remove smali comments from injected instructions ([83e249f](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/83e249f13b0cbca0f7282bb02732acfbeef6d2c6))
+
 ## [1.8.3](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.2...v1.8.3) (2026-09-09)
 
 ### 🐛 Bug Fixes
