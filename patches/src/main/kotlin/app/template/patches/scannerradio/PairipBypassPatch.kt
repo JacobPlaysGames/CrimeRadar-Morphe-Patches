@@ -7,14 +7,12 @@ import app.template.patches.shared.Constants.COMPATIBILITY_SCANNERRADIO
 /**
  * Disables Pairip DRM (Google Play Integrity) that crashes patched APKs.
  *
- * Three entry points are patched:
- *
+ * Entry points patched:
  * 1. StartupLauncher.launch() — no-op to prevent VMRunner/native lib loading.
  * 2. com.pairip.application.Application.attachBaseContext() — skip DRM checks.
- * 3. MyApplication.onCreate() — replace pairip reflection with:
- *    a) Bulk-init all R8 string dedup static fields (set to "") to prevent null NPEs.
- *       Pairip's VMRunner initialized these via JNI; without it they're all null.
- *    b) Call parent onCreate() for Hilt DI setup.
+ * 3. MyApplication.onCreate() — bulk-init R8 dedup fields + call parent for Hilt DI.
+ * 4. 12 pairip-injected lifecycle methods (TTvRdCYPAWUKRE + qtcicW) — replace
+ *    reflection dispatch with invoke-super to parent class.
  */
 @Suppress("unused")
 val pairipBypassPatch = bytecodePatch(
@@ -25,14 +23,24 @@ val pairipBypassPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_SCANNERRADIO)
 
     execute {
+        // Entry point 1: prevent CoreComponentFactory → StartupLauncher → VMRunner chain
         StartupLauncherFingerprint.method.addInstructions(0, "return-void")
 
+        // Entry point 2: skip SignatureCheck + LicenseClient + VMRunner.setContext
         PairipApplicationFingerprint.method.addInstructions(
             0,
             "invoke-super {p0, p1}, Lcom/scannerradio/MyApplication;->attachBaseContext(Landroid/content/Context;)V\nreturn-void"
         )
 
+        // Entry point 3: R8 dedup init + Hilt DI setup
         MyApplicationOnCreateFingerprint.method.addInstructions(0, buildR8Init())
+
+        // Entry point 4: patch all 12 pairip-injected lifecycle methods
+        // Each was replaced with TTvRdCYPAWUKRE/qtcicW Method.invoke() dispatch.
+        // Without VMRunner the Method fields are null → NPE. Replace with invoke-super.
+        for ((fp, superCall) in INJECTED_METHODS) {
+            fp.method.addInstructions(0, "invoke-super {p0}, $superCall\nreturn-void")
+        }
     }
 }
 
@@ -48,6 +56,30 @@ private fun buildR8Init(): String {
     sb.append("return-void")
     return sb.toString()
 }
+
+/**
+ * All 12 pairip-injected lifecycle methods mapped to their super class invoke-super target.
+ * TTvRdCYPAWUKRE (5) + qtcicW (7).
+ * Each method's body was replaced with Method.invoke() dispatch; without VMRunner
+ * the Method fields are null. We replace with invoke-super to parent class.
+ */
+@Suppress("unused")
+private val INJECTED_METHODS = mapOf(
+    // TTvRdCYPAWUKRE injections
+    FavoritesPickerOnStartFingerprint to "Lcom/scannerradio/activities/Hilt_FavoritesPickerActivity;->onStart()V",
+    LocaleEditOnDestroyFingerprint to "Lcom/twofortyfouram/locale/sdk/client/ui/activity/AbstractPluginActivity;->onDestroy()V",
+    LocaleEditOnStartFingerprint to "Lcom/twofortyfouram/locale/sdk/client/ui/activity/AbstractPluginActivity;->onStart()V",
+    MyMediaBrowserServiceOnCreateFingerprint to "Lym3;->onCreate()V",
+    WidgetConfigure4x1FavoritesOnCreateFingerprint to "Lcom/scannerradio/widgets/WidgetConfigureFavorites;->onCreate(Landroid/os/Bundle;)V",
+    // qtcicW injections
+    FavoritesPickerOnDestroyFingerprint to "Lcom/scannerradio/activities/Hilt_FavoritesPickerActivity;->onDestroy()V",
+    FavoritesPickerOnStopFingerprint to "Lcom/scannerradio/activities/Hilt_FavoritesPickerActivity;->onStop()V",
+    MainActivityOnStartFingerprint to "Lcom/scannerradio/ui/main/Hilt_MainActivity;->onStart()V",
+    MainActivityOnStopFingerprint to "Lcom/scannerradio/ui/main/Hilt_MainActivity;->onStop()V",
+    MyMediaBrowserServiceOnDestroyFingerprint to "Lym3;->onDestroy()V",
+    WidgetConfigure4x2FavoritesOnCreateFingerprint to "Lcom/scannerradio/widgets/WidgetConfigureFavorites;->onCreate(Landroid/os/Bundle;)V",
+    LinkActivityOnCreateFingerprint to "Lcom/scannerradio/activities/Hilt_LinkActivity;->onCreate(Landroid/os/Bundle;)V"
+)
 
 @Suppress("unused")
 private val R8_DEDUP_CLASSES = arrayOf(

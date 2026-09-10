@@ -73,6 +73,97 @@ object MyApplicationOnCreateFingerprint : Fingerprint(
     parameters = emptyList()
 )
 
+// ── Pairip Injected Lifecycle Methods (TTvRdCYPAWUKRE) ─────────────────────
+// Pairip replaces these method bodies with reflection dispatch through
+// TTvRdCYPAWUKRE/ztcicW static Method fields. Without VMRunner those fields
+// are null → NPE. Patch each to invoke-super to parent class.
+
+object FavoritesPickerOnStartFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/activities/FavoritesPickerActivity;",
+    name = "onStart",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object LocaleEditOnDestroyFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/activities/LocaleEditActivity;",
+    name = "onDestroy",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object LocaleEditOnStartFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/activities/LocaleEditActivity;",
+    name = "onStart",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object MyMediaBrowserServiceOnCreateFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/services/MyMediaBrowserService;",
+    name = "onCreate",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object WidgetConfigure4x1FavoritesOnCreateFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/widgets/WidgetConfigure_4x1_favorites;",
+    name = "onCreate",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;")
+)
+
+// ── Pairip Injected Lifecycle Methods (qtcicW) ─────────────────────────────
+
+object FavoritesPickerOnDestroyFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/activities/FavoritesPickerActivity;",
+    name = "onDestroy",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object FavoritesPickerOnStopFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/activities/FavoritesPickerActivity;",
+    name = "onStop",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object MainActivityOnStartFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/ui/main/MainActivity;",
+    name = "onStart",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object MainActivityOnStopFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/ui/main/MainActivity;",
+    name = "onStop",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object MyMediaBrowserServiceOnDestroyFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/services/MyMediaBrowserService;",
+    name = "onDestroy",
+    returnType = "V",
+    parameters = emptyList()
+)
+
+object WidgetConfigure4x2FavoritesOnCreateFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/widgets/WidgetConfigure_4x2_favorites;",
+    name = "onCreate",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;")
+)
+
+object LinkActivityOnCreateFingerprint : Fingerprint(
+    definingClass = "Lcom/scannerradio/activities/LinkActivity;",
+    name = "onCreate",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;")
+)
+
 // ── Ad Kill ─────────────────────────────────────────────────────────────────
 
 object ShowBannerAdsFingerprint : Fingerprint(
