@@ -1,3 +1,9 @@
+## [1.8.6](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.5...v1.8.6) (2026-09-10)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** fix Kotlin lexer errors by removing string templates from R8 init ([b5942cc](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/b5942cc4e4d05fabc7d5f1ce2337be71971e5bba))
+
 ## [1.8.5](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.4...v1.8.5) (2026-09-10)
 
 ### 🐛 Bug Fixes
