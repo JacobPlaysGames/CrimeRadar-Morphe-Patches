@@ -1,3 +1,9 @@
+## [1.8.5](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.4...v1.8.5) (2026-09-10)
+
+### 🐛 Bug Fixes
+
+* **scannerradio:** init all R8 string dedup classes to prevent null NPEs in hiltInternalInject ([076864d](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/commit/076864d2eb8e97d8b34e0ca670eb841dab7bb0a3))
+
 ## [1.8.4](https://github.com/JacobPlaysGames/CrimeRadar-Morphe-Patches/compare/v1.8.3...v1.8.4) (2026-09-10)
 
 ### 🐛 Bug Fixes
